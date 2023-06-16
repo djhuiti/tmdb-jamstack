@@ -19,6 +19,8 @@ const APP = {
       APP.showDefaults();
     }
     console.log(location);
+    console.log(APP.pageName);
+    console.log(location.hash);
 
     window.addEventListener("popstate", APP.pop);
     document.querySelector("form").addEventListener("submit", APP.submit);
