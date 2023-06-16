@@ -19,6 +19,7 @@ const APP = {
       APP.showDefaults();
     }
     console.log(location);
+    console.log(window.location);
     console.log(APP.pageName);
     console.log(location.hash);
 
@@ -137,7 +138,7 @@ const APP = {
 
     // If search is clicked on credits page, then redirect to index.html
     if (APP.pageName == "credits") {
-      window.location = `/#/${type}/${keyword}`;
+      window.location = `/tmdb-jamstack/#/${type}/${keyword}`;
     }
 
     let h2 = document.querySelector("h2");
@@ -264,7 +265,7 @@ const APP = {
         break;
         case "InvalidCreditURLError":
         APP.showError(err.message);
-        let redirect = () => window.location = '/';
+        let redirect = () => window.location = '/tmdb-jamstack';
         setTimeout(redirect, 5000);
         break;
       default:
