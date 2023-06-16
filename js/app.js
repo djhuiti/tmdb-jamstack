@@ -10,7 +10,7 @@ import {
 const APP = {
   lastSearch: '',
   lastMedia: '',
-  pageName: location.pathname.split("/")[1].split(".")[0],
+  pageName: location.pathname.split("/")[2].split(".")[0],
   noPush: true,
   init: () => {
     if (location.hash) {
